@@ -19,9 +19,9 @@ export function Counter() {
 
   return (
     <div>
-      <div className={styles.row}>
+      <div className="flex items-center justify-center">
         <button
-          className={styles.button}
+          className="appearance-none bg-none border-transparent rounded-sm border-solid border-2 cursor-pointer text-3xl px-3 pb-1"
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
