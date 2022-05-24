@@ -1,0 +1,19 @@
+.small-text {
+    @apply font-light leading-3 not-italic;
+    font-family: "Tajawal";
+    font-size: 11px;
+    color: #ECECEC
+  }
+
+  .directory-text {
+    @apply font-normal not-italic tracking-wide ;
+    font-family: "Roboto";
+    font-size: 10px;
+    line-height: 117%;
+    color: rgba(232, 232, 232, 1);
+    border-color: #D0D0D0;
+  }
+
+  .active {
+    background-color: rgba(233, 231, 255, 0.49);
+  }
