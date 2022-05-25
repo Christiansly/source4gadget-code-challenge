@@ -9,9 +9,7 @@ import { useLocation } from "react-router-dom";
 
 function Sidebar() {
   let location = useLocation();
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
+
   return (
     <SidebarContainer>
       <div className="flex flex-row items-center gap-1 w-full pl-4 pt-3 pb-12">

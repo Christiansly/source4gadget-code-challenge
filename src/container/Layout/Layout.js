@@ -6,9 +6,9 @@ function Layout({children}) {
   return (
     <div className="flex flex-row">
       <div><Sidebar /></div>
-      <div className="flex flex-col">
-        <div><Header /></div>
-        <div>{children}</div>
+      <div className="flex flex-col flex-grow">
+        <div ><Header /></div>
+        <div class="flex-grow">{children}</div>
       </div>
     </div>
   );
