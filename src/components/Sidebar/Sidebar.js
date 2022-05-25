@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import "./Sidebar.css";
 import { FaHome } from "react-icons/fa";
-import HomeIcon from "../svgs/HomeIcon";
-import SettingsIcon from "../svgs/SettingsIcon";
+import HomeIcon from "../../svgs/HomeIcon";
+import SettingsIcon from "../../svgs/SettingsIcon";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Sidebar() {
+  let location = useLocation();
+  useEffect(() => {
+    console.log(location);
+  }, [location]);
   return (
     <SidebarContainer>
       <div className="flex flex-row items-center gap-1 w-full pl-4 pt-3 pb-12">
@@ -19,7 +25,7 @@ function Sidebar() {
         </div>
       </div>
       {/* <div className="ml-2"> */}
-        <Menu icon={<HomeIcon />} label="Home" />
+      <Menu icon={<HomeIcon />} label="Home" />
       {/* </div> */}
 
       <div className="pl-4 text-left pr-8">
@@ -27,12 +33,18 @@ function Sidebar() {
           DIRECTORY
         </div>
         <div className="">
-          <div className="pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6 active">
+          <Link
+            to="/"
+            className="pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6"
+          >
             Dashboard
-          </div>
-          <div className="pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6">
+          </Link>
+          <Link
+            to="search-post"
+            className="pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6"
+          >
             Search posts
-          </div>
+          </Link>
           <div className="pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6">
             Add user
           </div>
@@ -40,7 +52,9 @@ function Sidebar() {
       </div>
 
       <SidebarFooter className="pr-8">
-        <div className="pl-4 w-full pb-3"><div className="border-solid border-t w-full"></div></div>
+        <div className="pl-4 w-full pb-3">
+          <div className="border-solid border-t w-full"></div>
+        </div>
         <Menu icon={<SettingsIcon />} label="Settings" />
       </SidebarFooter>
     </SidebarContainer>
@@ -80,6 +94,5 @@ const RoundedRectangle = styled.div`
 const SidebarFooter = styled.div`
   position: absolute;
   bottom: 24px;
-  width: 251px
-
+  width: 251px;
 `;
