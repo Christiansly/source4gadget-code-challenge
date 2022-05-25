@@ -1,4 +1,6 @@
-# Getting Started with Create React App and Redux
+# Source 4 Gadget Code Challenge
+
+This is a solution to the code challenge using React, Redux, tailwind, React-router-dom
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
