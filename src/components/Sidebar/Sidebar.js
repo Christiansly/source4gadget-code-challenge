@@ -35,13 +35,13 @@ function Sidebar() {
         <div className="">
           <Link
             to="/"
-            className="pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6"
+            className={"pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6" + ((location?.pathname === "/") ? " active": "")}
           >
             Dashboard
           </Link>
           <Link
             to="search-post"
-            className="pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6"
+            className={"pl-2 flex items-center font-normal text-sm text-white not-italic tracking-wide mt-2 h-6" + ((location?.pathname === "/search-post") ? " active": "")}
           >
             Search posts
           </Link>
