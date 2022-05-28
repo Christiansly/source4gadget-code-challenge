@@ -8,8 +8,10 @@ function Dashboard() {
     background-color: #9991E5;
   `;
   const PopularTagsContainer = styledComponents.div`
-box-shadow: 0px 0px 7px 3px rgba(40, 40, 40, 0.03);
-border-radius: 4px
+
+    border: 1px solid #FFF;
+    box-shadow: 0px 0px 7px rgba(40, 40, 40, 0.17);
+    border-radius: 4px
 `;
   return (
     <div className="pl-16 pr-16 pt-12">
@@ -30,15 +32,18 @@ border-radius: 4px
           </div>
         </div>
         <PopularTagsContainer className="pl-5 pt-4 flex-grow text-left">
-          <h1 className="font-bold text-md">Popular Tags</h1>
+          <h1 className="font-bold text-md mb-4">Popular Tags</h1>
           <div>
             <div className="flex gap-4">
-              <Tag title="Dog" number="345" />
+              <Tag active={true} title="Dog" number="345" />
               <Tag title="Water" number="20" />
             </div>
             <div className="flex gap-4">
-              <Tag title="Dog" number="345" />
-              <Tag title="Water" number="20" />
+              <Tag title="Natutre" number="18" />
+              <Tag title="Private info requests" number="17" />
+            </div>
+            <div className="flex gap-4">
+              <Tag title="Winter" number="12" />
             </div>
           </div>
         </PopularTagsContainer>
