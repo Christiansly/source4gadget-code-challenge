@@ -1,6 +1,8 @@
 import React from "react";
 import styledComponents from "styled-components";
 import Card from "../components/Card/Card";
+import Table from "../components/Table/Table";
+import UserTable from "../components/Table/UserTable/UserTable";
 import Tag from "../components/Tags/Tag";
 
 function Dashboard() {
@@ -20,7 +22,7 @@ function Dashboard() {
         <DotContainer className="h-2 w-2 rounded-full" />{" "}
         <DotContainer className="h-2 w-2 rounded-full" />
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-6 mb-12">
         <div className="flex-col flex gap-3">
           <div className="gap-4 flex flex-row">
             <Card label="User" number={100} main={true} />
@@ -47,6 +49,10 @@ function Dashboard() {
             </div>
           </div>
         </PopularTagsContainer>
+      </div>
+      <div className="flex w-full">
+        <UserTable />
+        
       </div>
     </div>
   );
