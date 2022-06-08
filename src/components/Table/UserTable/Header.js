@@ -9,10 +9,10 @@ const Title = ({children}) => {
 
 function Header() {
   return (
-    <div className="w-full border flex justify-center pl-4">
+    <div className="w-full border flex justify-center p-5">
       <Cell percentage="15" fontSize="11">
           
-      <Title > <input type="checkbox" />  id</Title>
+      <Title > <input type="checkbox" className="m-2"/>  id</Title>
         <div className="gap-0.5 flex items-center flex-col ml-2">
           <UpCaret />
           <DownCaret />
