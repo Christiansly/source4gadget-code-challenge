@@ -13,10 +13,18 @@ function Dashboard() {
 
     border: 1px solid #FFF;
     box-shadow: 0px 0px 7px rgba(40, 40, 40, 0.17);
-    border-radius: 4px
+    border-radius: 4px;
+    background-color: #FFF;
 `;
+  const TableContainer = styledComponents.div`
+  
+    display: flex; 
+    width: 100%;
+    height: 45%;
+
+    `;
   return (
-    <div className="pl-16 pr-16 pt-12">
+    <div className="pl-16 pr-16 pt-12 h-full overflow-hiddent">
       <div className="flex gap-1 flex-row-reverse mb-3">
         <DotContainer className="h-2 w-2 rounded-full" />{" "}
         <DotContainer className="h-2 w-2 rounded-full" />{" "}
@@ -50,10 +58,9 @@ function Dashboard() {
           </div>
         </PopularTagsContainer>
       </div>
-      <div className="flex w-full">
+      <TableContainer>
         <UserTable />
-        
-      </div>
+      </TableContainer>
     </div>
   );
 }

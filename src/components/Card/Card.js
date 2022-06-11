@@ -10,7 +10,7 @@ function Card({ label, number, main }) {
         : "0px 0px 7px rgba(40, 40, 40, 0.17);"
     };
     border-radius: 4px;
-    background-color: ${main? "#9991E5": ""};
+    background-color: ${main? "#9991E5": "#FFF"};
     width: 173px;
 `;
 
